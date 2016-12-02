@@ -6,10 +6,11 @@ var port = process.env.PORT || 3000;
 
 mongoose.connect(mongoUri);
 
-app.use('/scores', function(req, res ) {
-
+app.use('/players', function(req, res ) {
     res.json({"hello" : "monkey"});
 })
+
+
 app.listen(port, function(){
     console.log("ZTE Basketball server side magic is happening on PORT " + port);
 })
