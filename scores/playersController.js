@@ -17,10 +17,15 @@ var playersController = {
 
 		//mailer.confirmPlayer(req)
 		res.json({message: player, success: true})
-
-	}, 
-	index : function (req, res) {
-		Player.find({}, function (err, players){
+	},
+	findTopTen : function (req, res) {
+		Player.find({}).sort({time: 'desc'}).limit(5).exec(function (err, players){
+			if (err) throw err;
+			res.json(players)
+		})
+	},
+	findLast : function (req, res) {
+		Player.find({}).sort({time: 'desc'}).limit(1).exec(function (err, players){
 			if (err) throw err;
 			res.json(players)
 		})
