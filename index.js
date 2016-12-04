@@ -13,6 +13,8 @@ mongoose.connect(mongoUri);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
+
+app.use( express.static( __dirname + "/public" ) );
 //app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/players', playerRoutes );
