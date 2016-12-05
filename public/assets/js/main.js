@@ -1,4 +1,4 @@
-$.get("http://localhost:3000/players/topten", function(data, status){
+$.get("https://trainrobber-ztebasketball.herokuapp.com/players/topten", function(data, status){
         console.log(data);
         var table = $('#table');
         for (d in data){
@@ -35,7 +35,7 @@ $("#submit").on('click', function() {
    console.log(name);
    console.log(email);
 
-    $.post("http://localhost:3000/players/createplayer",
+    $.post("https://trainrobber-ztebasketball.herokuapp.com/players/createplayer",
     {
         name: name,
         email: email
