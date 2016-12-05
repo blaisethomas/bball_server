@@ -9,6 +9,10 @@ $.get("https://trainrobber-ztebasketball.herokuapp.com/players/topten", function
             var name = data[d].name;
             td1.innerHTML = name;
             tr.append(td1);
+            var td5 = document.createElement("td");
+            var email = data[d].email;
+            td5.innerHTML = email;
+            tr.append(td5);
             var td2 = document.createElement("td");
             var score = data[d].score;
             td2.innerHTML = score;
