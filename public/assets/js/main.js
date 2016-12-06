@@ -20,14 +20,11 @@ $.get("https://trainrobber-ztebasketball.herokuapp.com/players/topten", function
             var td3 = document.createElement("td");
             var totalShots = data[d].totalShots;
             var accuracy = score / totalShots * 100;
-            td3.innerHTML = accuracy + "%";
+            td3.innerHTML = accuracy.toFixed(2) + "%";
             tr.append(td3);
             var td4 = document.createElement("td");
-            td4.innerHTML = data[d].time;
+            td4.innerHTML = new Date (data[d].time).toLocaleTimeString();
             tr.append(td4);
-
-
-
 
             table.append(tr);
 
