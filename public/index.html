@@ -7,23 +7,36 @@
         <link rel="stylesheet" href="assets/style/css/main.css" media="screen" title="no title" charset="utf-8">
     </head>
     <body>
+        <br>
         <div class="container">
             <div class="row">
                
-                <img src=" https://www.vrfocus.com/wp-content/uploads/2016/08/CES-2017-logo.png" class="col-sm-3"/>
-                <img src="http://upandroid.com/wp-content/uploads/2016/05/zte-new-logo-2.gif" class="col-sm-6"/>
-                <br><br><br><br>
-                <form class="col-sm-3">
-                    <input type="text" id="name" placeholder="Name">
-                    <br><br>
-                    <input type="text" id="email" placeholder="Email">
-                    <br><br>
-                    <div class="btn btn-primary" id="submit">New Player</div>
-                </form>
-                
-            </div>
+                <div class="col-md-4 text-center">
+                     <img src=" https://www.vrfocus.com/wp-content/uploads/2016/08/CES-2017-logo.png" style="width:300px;" />
+                </div>
+                <div class="jumbotron col-md-4">
+                    <div class="text-center form-group">
+                        <br>
+                        <form >
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                            <br>
+                            <input type="text" class="form-control" id="email" placeholder="Email">
+                            <br>
+                            <div class="btn btn-primary" class="form-control" id="submit">New Player</div>
+                        </form>
+                    </div>
+                </div>
 
-            <h1>Leaderboard</h1>
+                <div class="col-md-4 text-center" style="float:right;">
+                    <img src="http://upandroid.com/wp-content/uploads/2016/05/zte-new-logo-2.gif" style="width:300px;"/>
+                </div>
+        
+            </div>
+            
+            <div class="row">
+                <h1 class=" text-center">Leaderboard</h1>
+            </div>
+            
             <table class="table" id="table">
                 <tr>
                     <th>Name</th>
