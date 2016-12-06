@@ -40,7 +40,7 @@ var playersController = {
 		res.json({message: highscore, success: true})
 	},
 	topTen : function (req, res) {
-		Highscore.find({}).sort({totalShots: 'desc', score: 'desc'}).exec(function (err, players){
+		Highscore.find({}).limit(50).sort({score: 'desc', totalShots: 'asc'}).exec(function (err, players){
 			if (err) throw err;
 			res.json(players)
 		})
